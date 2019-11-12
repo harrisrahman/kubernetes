@@ -7,15 +7,10 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // Hello HelloType is a top level type
 type Hello struct {
-	//
-	metav1.TypeMeta `json:",inline"`
-	// +optional
+	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-
-	// +optional
-	Status HelloStatus `json:"status,omitempty"`
-
-	Spec HelloSpec `json:"spec,omitempty"`
+	Status            HelloStatus `json:"status,omitempty"`
+	Spec              HelloSpec   `json:"spec,omitempty"`
 }
 
 // HelloStatus comment
